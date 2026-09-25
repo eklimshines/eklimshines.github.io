@@ -3,3 +3,14 @@
 ---
 
 @import 'modern-resume-theme';
+
+// The theme sizes only p and ul (1.6rem); numbered lists (ol) fall back to the tiny default.
+ol {
+  font-size: 1.6rem;
+  text-align: justify;
+  padding-left: 2.2rem;
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+}
