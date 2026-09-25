@@ -1,68 +1,201 @@
 # Site
-repository: sproogen/resume-theme
+repository: eklimshines/eklimshines.github.io
 favicon: images/favicon.ico
 
+# Content configuration version
+version: 2
+
 # Personal info
-name: MinJaeo Jo
-title: SW Developer/Researcher
+name: MinJae Jo
+title: SW Developer / Researcher
 email: intereklim@gmail.com
-website: eklimshines.github.io
+website: https://eklimshines.github.io
+
+# Dark Mode (true/false/never)
+darkmode: false
 
 # Social links
-#twitter_username: facespics
-github_username:  eklimshines
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-instagram_username: eklimshines
+github_username: eklimshines
 linkedin_username: eklimshines
-# pinterest_username: jekyll
-#youtube_username: globalmtb
-# googleplus_username: +jekyll
+instagram_username: eklimshines
 
 # About Section
-# about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
+  Hi, I'm MinJae — a cross-platform application developer with ~10 years of experience across desktop, mobile, embedded systems and security research.
 
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  At **bHaptics** I own the flagship desktop app, *bHaptics Player*, across three generations (C#/WPF → Tauri/Rust), and unified five platform SDKs onto a single Rust core through FFI and WebAssembly. Before that, I built V2X / C-ITS software for national R&D projects and researched authentication and applied cryptography at Sejong University's Information Security Lab.
 
-# Education Section
-# educaton_title: Education
+  M.S. in Information Security · 8 peer-reviewed publications · 5 patents filed (4 granted)
 
-# Experience Section
-# experience_title: Experience
+  I am most skilled in: <mark>Rust</mark> <mark>C#</mark> <mark>Kotlin / Android</mark> <mark>Bluetooth LE</mark> <mark>FFI / WASM</mark>
 
-# Projects Section
-# projects_title: Projects
+content:
+  - title: Experience
+    layout: list
+    content:
+      - layout: right
+        border: weak
+        title: bHaptics
+        sub_title: Software Developer, R&D Center
+        caption: Dec 2021 – Present
+        link: https://www.bhaptics.com
+        link_text: bhaptics.com
+        quote: >
+          Primary developer for the flagship haptics player and cross-platform SDK · Seoul, South Korea
+        description: | # this will include new lines to allow paragraphs
+          - Own end-to-end development of **bHaptics Player**, a consumer desktop app (~5,000 MAU) driving 12 haptic hardware models over Bluetooth LE, across three generations (1.x → 3.x).
+          - **Player 3.x (Tauri + Rust):** validated the stack with a firmware-updater PoC, then built ~50% of the rearchitecture — the entire Rust core (Bluetooth, haptics engine, WebSocket) on a message–action pattern — cutting idle CPU from ~10% to ~2%.
+          - **Player 2.x (.NET Framework / WPF):** led development (~80%), expanding a device-only utility into a community platform (game lists, audio-profile sharing); earlier maintained 1.x, adding USB support and Themida anti-decompilation packing.
+          - **SDK 2.0:** redesigned the open-source SDK into a closed, API-driven architecture with C++ TOTP authentication; unified C, C#, Python, Java/Kotlin and Web SDKs onto one Rust core via cbindgen, Interoptopus, UniFFI and WASM.
+          - Maintained and extended the **Android SDK**, including a Rust-based NDK module for audio capture; mentored a junior engineer who now owns it.
+          - Drove **ISO 27001** certification and ongoing internal security operations.
 
-# More Section
-# more_title: Publications
-more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-   - Rock climbing
-   - Gaming
-   - Knitting
-   
-# More Section
-# more_title: A Little More About Me
-more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-   - Rock climbing
-   - Gaming
-   - Knitting
-   - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+      - layout: right
+        border: weak
+        title: Sejong University
+        sub_title: Researcher, Information Security Lab
+        caption: Jun 2019 – Feb 2021
+        link: http://sejong.ac.kr/
+        link_text: sejong.ac.kr
+        quote: >
+          Department of Computer and Information Security · Seoul, South Korea
+        description: | # this will include new lines to allow paragraphs
+          - Developed peripheral-based authentication software for UAV (drone) controllers over Bluetooth/Wi-Fi, applying ID-based Sakai–Kasahara key exchange with AES (C, Raspberry Pi).
+          - Researched Android app wrapping — injecting security features into APKs without source code via Smali/APK analysis and bytecode transformation (Python) — and blockchain-based drone security.
+          - Filed 5 patents (4 granted) in authentication, signcryption and secure communication.
+
+          **Research projects**
+          - A Study on Functional Signature and Its Applications — IITP (2019–2021)
+          - IT Convergence Technology for Intelligent Unmanned Aerial Systems — IITP (2019–2020)
+          - Blockchain-based Security Enhancements for Unmanned Aerial Vehicles — NRF (2020–2021)
+
+      - layout: right
+        title: essys Corp
+        sub_title: SW Developer, R&D Center
+        caption: Aug 2015 – Sep 2018
+        link: http://www.essys.co.kr
+        link_text: essys.co.kr
+        quote: >
+          Vehicular communications & Cooperative-ITS (national R&D projects) · Incheon, South Korea
+        description: | # this will include new lines to allow paragraphs
+          - Developed embedded C software for WAVE roadside units (RSU): TCP/IP control–radio links and ISO 14827 DATEX-based center communication; field-tested on a highway testbed.
+          - Built an Android C-ITS display app: TCP/UDP communication with V2X terminals and ASN.1 decoding of SAE J2735 messages (BSM, TIM, RSA).
+          - Developed Hybrid V2X (WAVE + LTE) terminal software, C# RSU/PVD monitoring tools, and Qt-based test tools for European ITS-G5 services (CAM/DENM).
+
+          **National R&D projects**
+          - Smart Highway Testbed Monitoring and Management — KAIA (2015–2016)
+          - Development of Cooperative Automated Driving Highway Systems — KAIA (2015–2018)
+          - Vehicle Authentication, Security & Predictive Maintenance Platform using OTP-based HSM — KEIT (2015–2016)
+          - Future Technology for Mixed-Traffic Intersections for Autonomous Driving — IITP (2016)
+          - Cloud-based Car Infotainment System with Real-time Traffic Conditions — KEIT (2016)
+          - ETSI Message Set Compliant V2X System and Applications based on ITS-G5 — KIAT (2016–2018)
+          - Hybrid V2X Communication Module for Autonomous Driving — IITP (2018)
+
+  - title: Projects
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: bHaptics Player 3.x
+        caption: Dec 2024 – Present
+        quote: >
+          Tauri + Rust rearchitecture of the Windows desktop player
+        description: | # this will include new lines to allow paragraphs
+          Started with a firmware-updater PoC to validate Tauri, then built the entire Rust core — Bluetooth LE, haptics engine and WebSocket server — on a message–action pattern. Idle CPU dropped from ~10% to ~2%.
+
+      - layout: left
+        border: weak
+        title: bHaptics SDK 2.0
+        caption: Mar 2022 – Present
+        quote: >
+          One Rust core behind C, C#, Python, Java/Kotlin and Web SDKs
+        description: | # this will include new lines to allow paragraphs
+          Moved from an open-source SDK to a closed, API-driven architecture with C++ TOTP authentication that binds usage to first-party devices. Bindings generated with cbindgen, Interoptopus, UniFFI and WASM; also delivered BLE integration for webOS.
+
+      - layout: left
+        border: weak
+        title: bHaptics Player 2.x
+        caption: Mar 2022 – 2025
+        quote: >
+          C# / .NET Framework / WPF desktop app
+        description: | # this will include new lines to allow paragraphs
+          Led ~80% of development, turning a device-only utility into a community platform with game lists and audio-profile sharing.
+
+      - layout: left
+        title: SimHub Plugin
+        caption: Dec 2024 – Jan 2025
+        quote: >
+          C# / WPF plugin for the SimHub sim-racing platform
+        description: | # this will include new lines to allow paragraphs
+          Connects racing-sim telemetry from SimHub to bHaptics haptic devices.
+
+  - title: Education
+    layout: list
+    content:
+      - layout: top-right
+        border: weak
+        title: Sejong University
+        sub_title: M.S., Computer Science and Engineering (Information Security)
+        caption: Mar 2014 – Aug 2015
+        description: | # this will include new lines to allow paragraphs
+          - Thesis: [Performance Enhancement of Malware Detection in the Lightweight Client Environment](http://sejong.dcollection.net/srch/srchDetail/000002066446?localeParam=en)
+          - Adviser: Prof. Ji Sun Shin
+          - Focus: Android security, signature-based anti-virus, malware detection
+          - GPA 4.13 / 4.5
+
+      - layout: top-right
+        title: Sejong University
+        sub_title: B.S., Computer Engineering
+        caption: Mar 2009 – Feb 2013
+        description: | # this will include new lines to allow paragraphs
+          - GPA 3.65 / 4.5
+
+  - title: Technical Skills
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      - **Languages:** Rust, C#, Kotlin, Java, C/C++, Python
+      - **Desktop:** Tauri (Rust), WPF (.NET Framework)
+      - **Mobile:** Android (Kotlin / Java, NDK)
+      - **Connectivity / Systems:** Bluetooth LE / GATT, FFI (cbindgen, UniFFI, Interoptopus), WebAssembly, WebSocket
+      - **Security / Ops:** ISO 27001, TOTP-based authentication, code hardening (Themida), CI/CD (GitHub Actions)
+
+  - title: Publications
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      **Journals**
+
+      1. J. S. Shin, S. Lee, S. Choi, **M. Jo**, S.-H. Lee, "[A New Distributed, Decentralized Privacy-Preserving ID Registration System](https://doi.org/10.1109/MCOM.011.2000699)," *IEEE Communications Magazine*, vol. 59, no. 6, pp. 138–144, Jun 2021.
+      2. M. Choi, S. Lee, **M. Jo**, J. S. Shin, "[Keystroke Dynamics-Based Authentication Using Unique Keypad](https://doi.org/10.3390/s21062242)," *Sensors*, vol. 21, no. 6, 2242, Mar 2021.
+      3. J. S. Shin, **M. Jo**, J. Y. Hwang, J. Lee, "[A Verifier-Based Password-Authenticated Key Exchange Using Tamper-Proof Hardware](https://doi.org/10.1093/comjnl/bxaa178)," *The Computer Journal*, Jan 2021.
+      4. **M. J. Jo**, Y.-G. Kim, C.-D. Kim, B.-I. Min, J.-S. Kim, "[Research on Secure Communication through RSU-based Group Key](https://doi.org/10.5916/jkosme.2017.41.9.890)," *Journal of the Korean Society of Marine Engineering*, vol. 41, no. 9, pp. 890–895, Nov 2017.
+      5. J. Lee, **M. J. Jo**, J. S. Shin, "[LigeroAV: A Light-Weight, Signature-Based Antivirus for Mobile Environment](https://doi.org/10.1587/transinf.2016EDL8163)," *IEICE Trans. Inf. & Syst.*, vol. E99-D, no. 12, pp. 3185–3187, Dec 2016.
+      6. **M. J. Jo**, J. S. Shin, "[MWMon: A Software Defined Network-based Malware Monitor](https://doi.org/10.9723/jksiis.2015.20.5.037)," *Journal of the Korea Industrial Information Systems Research*, vol. 20, no. 5, pp. 37–44, Oct 2015.
+      7. **M. J. Jo**, J. S. Shin, "[A Performance Enhancement Scheme for Signature-based Anti-Viruses](https://doi.org/10.9723/jksiis.2015.20.2.065)," *Journal of the Korea Industrial Information Systems Research*, vol. 20, no. 2, pp. 65–72, Apr 2015.
+      8. **M. J. Jo**, J. S. Shin, "[Study on Security Vulnerabilities of Implicit Intents in Android](https://doi.org/10.13089/JKIISC.2014.24.6.1175)," *Journal of the Korea Institute of Information Security & Cryptology*, vol. 24, no. 6, pp. 1175–1184, Dec 2014.
+
+      **Conferences**
+
+      1. **M. J. Jo**, Y.-G. Kim, C.-D. Kim, B.-I. Min, J.-S. Kim, "The Research of Group Key Communication for Secure Vehicular Network based on RSU," *The 2017 Korea Institute of ITS Conference*, Jeju, Korea, Apr 2017.
+
+  - title: Patents
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      1. J. S. Shin, **M. Jo**, "[Method for Signcryption Using Functional Signature and Computing Device for Executing the Method](https://doi.org/10.8080/1020200161683)," KR 10-2474628 (registered 2022.12.01)
+      2. J. S. Shin, S. Lee, **M. Jo**, "[System and Method for Authenticating Drone and Computing Device for Executing the System](https://doi.org/10.8080/1020200149943)," KR 10-2020-0149943 (filed 2020.11.11)
+      3. J. S. Shin, **M. Jo**, "[System and Method for Vehicle Verification and Communication](https://doi.org/10.8080/1020200126022)," KR 10-2020-0126022 (filed 2020.09.28)
+      4. J. S. Shin, **M. Jo**, "[System and Method for Authentication Using Neighbor Devices](https://doi.org/10.8080/1020200102133)," KR 10-2020-0102133 (filed 2020.08.14)
 
 # Footer
 footer_show_references: true
 
 # Build settings
-remote_theme: sproogen/resume-theme
+remote_theme: sproogen/modern-resume-theme
 
 sass:
   sass_dir: _sass
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-seo-tag
