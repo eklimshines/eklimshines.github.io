@@ -54,43 +54,102 @@ content:
       - layout: right
         border: weak
         title: Sejong University
-        sub_title: Researcher, Information Security Lab
+        sub_title: Researcher (M.S.), Information Security Lab
         caption: Jun 2019 – Feb 2021
         link: http://sejong.ac.kr/
         link_text: sejong.ac.kr
         quote: >
-          Department of Computer and Information Security · Seoul, South Korea
+          Industry-Academic Cooperation Foundation, Dept. of Information Security · Seoul, South Korea
         description: | # this will include new lines to allow paragraphs
-          - Developed peripheral-based authentication software for UAV (drone) controllers over Bluetooth/Wi-Fi, applying ID-based Sakai–Kasahara key exchange with AES (C, Raspberry Pi).
-          - Researched Android app wrapping — injecting security features into APKs without source code via Smali/APK analysis and bytecode transformation (Python) — and blockchain-based drone security.
-          - Filed 5 patents (4 granted) in authentication, signcryption and secure communication.
+          Researched security problems grounded in core information-security techniques, alongside SW development for national research projects. Filed 5 patents (4 granted).
 
-          **Research projects**
-          - A Study on Functional Signature and Its Applications — IITP (2019–2021)
-          - IT Convergence Technology for Intelligent Unmanned Aerial Systems — IITP (2019–2020)
-          - Blockchain-based Security Enhancements for Unmanned Aerial Vehicles — NRF (2020–2021)
+          **Android App Wrapping** — internal lab project · Sep 2020 – Feb 2021<br>
+          *Python · team of 2 · 50% contribution*
+
+          - Researched adding and managing security features in Android apps without their original source code.
+          - Analyzed Smali code and APK structure to support apps that existing wrapping tools could not handle.
+          - Fixed failures when injecting security code by converting instructions from 4-bit to 8-bit register forms.
+          - Delivered Python scripts that automate app wrapping.
+
+          **IT Convergence Technology for Intelligent UAVs** — IITP · Feb 2020 – Dec 2020<br>
+          *C, Raspberry Pi, PBC (Pairing-Based Cryptography) library · solo · 100% contribution*
+
+          - Authenticated UAV controllers using the peripheral devices around them.
+          - Implemented and tested the scheme over Wi-Fi and Bluetooth, using ID-based Sakai–Kasahara key exchange with AES.
+          - Led to 4 patent filings: drone authentication, drone rental, vehicle verification, and neighbor-device authentication.
+
+          **Functional Signature Design and Applications** — IITP · Jun 2019 – Jan 2021<br>
+          *C, Raspberry Pi, PBC library · team of 2 · 50% contribution*
+
+          - Applied functional signatures to ID-based UAV authentication and benchmarked them against existing ID-based schemes.
+          - Resulted in a paper in *The Computer Journal* and a signcryption patent (granted 2022).
+
+          **Blockchain-based Security Enhancement for UAVs** — NRF · Jun 2020 – Feb 2021
+
+          - Studied countermeasures to UAV security threats using machine learning and blockchain.
 
       - layout: right
+        border: weak
         title: essys Corp
-        sub_title: SW Developer, R&D Center
+        sub_title: Research Engineer, R&D Center (Advanced Development & C-ITS Teams)
         caption: Aug 2015 – Sep 2018
         link: http://www.essys.co.kr
         link_text: essys.co.kr
         quote: >
-          Vehicular communications & Cooperative-ITS (national R&D projects) · Incheon, South Korea
+          Automotive electronics maker (ETCS, V2X) · Incheon, South Korea
         description: | # this will include new lines to allow paragraphs
-          - Developed embedded C software for WAVE roadside units (RSU): TCP/IP control–radio links and ISO 14827 DATEX-based center communication; field-tested on a highway testbed.
-          - Built an Android C-ITS display app: TCP/UDP communication with V2X terminals and ASN.1 decoding of SAE J2735 messages (BSM, TIM, RSA).
-          - Developed Hybrid V2X (WAVE + LTE) terminal software, C# RSU/PVD monitoring tools, and Qt-based test tools for European ITS-G5 services (CAM/DENM).
+          Developed SW for V2X roadside units, in-vehicle terminals and C-ITS services across national R&D projects.
 
-          **National R&D projects**
-          - Smart Highway Testbed Monitoring and Management — KAIA (2015–2016)
-          - Development of Cooperative Automated Driving Highway Systems — KAIA (2015–2018)
-          - Vehicle Authentication, Security & Predictive Maintenance Platform using OTP-based HSM — KEIT (2015–2016)
-          - Future Technology for Mixed-Traffic Intersections for Autonomous Driving — IITP (2016)
-          - Cloud-based Car Infotainment System with Real-time Traffic Conditions — KEIT (2016)
-          - ETSI Message Set Compliant V2X System and Applications based on ITS-G5 — KIAT (2016–2018)
-          - Hybrid V2X Communication Module for Autonomous Driving — IITP (2018)
+          **Hybrid V2X Communication Module for Autonomous Driving** — KEIT · Nov 2018 – Dec 2018 (freelance)<br>
+          *Embedded C, C# (WinForms) · solo · 100% contribution*
+
+          - Developed Hybrid V2X (WAVE + legacy LTE) terminal software for WAVE and LTE transmit/receive.
+          - Built a Windows monitoring program for Hybrid V2X PVD (Probe Vehicle Data) and roadside units.
+
+          **Android App for C-ITS Service Display** — internal project · Mar 2018 – Aug 2018<br>
+          *Java, Android · solo · 100% contribution*
+
+          - Replaced the navigation-based display from the C-ITS pilot program with an Android tablet app.
+          - Developed TCP/UDP communication between Android and the V2X terminal.
+          - Decoded and parsed SAE J2735 messages (BSM, TIM, RSA) via ASN.1, and implemented the C-ITS service decision logic.
+
+          **ITS-G5 V2X System & Services for the European Message Set (CAM, DENM)** — MOTIE International Joint R&D · Sep 2016 – Aug 2018<br>
+          *C/C++, Qt (Linux) · team of 2 · 50% contribution*
+
+          - Developed V2X roadside-unit software compliant with the European safety message set (embedded C).
+          - Built the Roadworks service and a Qt test program for on-site European conformance testing.
+
+          **Cloud-based Personalized Infotainment System** — KEIT · May 2016 – Dec 2016<br>
+          *Embedded C · solo · 100% contribution*
+
+          - Collected vehicle data over OBD-II and streamed it to the cloud in real time.
+          - On critical events (e.g., hazard lights on after an accident), uploaded photos and 10 seconds of video to the cloud.
+
+          **Vehicle Authentication & Predictive Maintenance Platform using OTP-based HSM** — MOTIE · Dec 2015 – Nov 2016
+
+          - Designed algorithms to check vehicle control-module status and predict module lifetime, focusing on wiper-blade life prediction.
+
+          **V2X Roadside Unit for Cooperative Automated Driving Highways** — MOLIT · Aug 2015 – Sep 2018<br>
+          *Embedded C · solo · 100% contribution*
+
+          - Developed TCP/IP communication between the RSU control unit and radio unit.
+          - Developed control-unit-to-center communication based on ISO 14827 DATEX.
+
+          **Hybrid Roadside Unit Testbed Monitoring** — MOLIT · Aug 2015 – Jun 2016<br>
+          *C# (WinForms) · solo · 100% contribution*
+
+          - Extended the C# monitoring tool for the hybrid RSU testbed.
+          - Ran real-vehicle tests on the WAVE testbed on the Gyeongbu Expressway (Seoul–Singal).
+
+      - layout: right
+        title: Nuri Information Technology
+        sub_title: Android Developer (Intern), Development Team
+        caption: Sep 2011 – Apr 2012
+        quote: >
+          Lifecycle management system for ships and offshore plants in operation
+        description: | # this will include new lines to allow paragraphs
+          - Developed the Android-based core system monitoring module.
+          - Built streaming and messaging between an Android tablet and a PC: TCP/UDP video streaming plus text and voice transmission.
 
   - title: Projects
     layout: list
@@ -159,6 +218,7 @@ content:
       - **Mobile:** Android (Kotlin / Java, NDK)
       - **Connectivity / Systems:** Bluetooth LE / GATT, FFI (cbindgen, UniFFI, Interoptopus), WebAssembly, WebSocket
       - **Security / Ops:** ISO 27001, TOTP-based authentication, code hardening (Themida), CI/CD (GitHub Actions)
+      - **Certification:** Engineer Information Processing (정보처리기사), 2012
 
   - title: Publications
     layout: text
@@ -177,14 +237,16 @@ content:
       **Conferences**
 
       1. **M. J. Jo**, Y.-G. Kim, C.-D. Kim, B.-I. Min, J.-S. Kim, "The Research of Group Key Communication for Secure Vehicular Network based on RSU," *The 2017 Korea Institute of ITS Conference*, Jeju, Korea, Apr 2017.
+      2. B.-I. Min, Y.-G. Kim, C.-D. Kim, **M. J. Jo**, J.-S. Kim, "Analysis of Real-Road V2X Communication Performance by Road Elevation," *The 2017 Korea Institute of ITS Conference*, Jeju, Korea, Apr 2017.
 
   - title: Patents
     layout: text
     content: | # this will include new lines to allow paragraphs
-      1. J. S. Shin, **M. Jo**, "[Method for Signcryption Using Functional Signature and Computing Device for Executing the Method](https://doi.org/10.8080/1020200161683)," KR 10-2474628 (registered 2022.12.01)
-      2. J. S. Shin, S. Lee, **M. Jo**, "[System and Method for Authenticating Drone and Computing Device for Executing the System](https://doi.org/10.8080/1020200149943)," KR 10-2020-0149943 (filed 2020.11.11)
-      3. J. S. Shin, **M. Jo**, "[System and Method for Vehicle Verification and Communication](https://doi.org/10.8080/1020200126022)," KR 10-2020-0126022 (filed 2020.09.28)
-      4. J. S. Shin, **M. Jo**, "[System and Method for Authentication Using Neighbor Devices](https://doi.org/10.8080/1020200102133)," KR 10-2020-0102133 (filed 2020.08.14)
+      1. J. S. Shin, **M. Jo**, "[Method for Signcryption Using Functional Signature and Computing Device for Executing the Method](https://doi.org/10.8080/1020200161683)," KR 10-2474628 (filed 2020.11, registered 2022.12.01)
+      2. J. S. Shin, S. Lee, **M. Jo**, "[System and Method for Authenticating Drone and Computing Device for Executing the System](https://doi.org/10.8080/1020200149943)," KR 10-2212287 (filed 2020.11.11, registered 2021.01.29)
+      3. "Drone Rental Method and Apparatus and System for Performing the Same" (filed 2020.10)
+      4. J. S. Shin, **M. Jo**, "[System and Method for Vehicle Verification and Communication](https://doi.org/10.8080/1020200126022)," KR 10-2256730 (filed 2020.09.28, registered 2021.05.20)
+      5. J. S. Shin, **M. Jo**, "[System and Method for Authentication Using Neighbor Devices](https://doi.org/10.8080/1020200102133)," KR 10-2224264 (filed 2020.08.14, registered 2021.03.02)
 
 # Footer
 footer_show_references: true
